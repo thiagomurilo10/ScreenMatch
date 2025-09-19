@@ -28,4 +28,13 @@ public class Musica extends Audio{
     public void setCantor(String cantor) {
         this.cantor = cantor;
     }
+
+    @Override
+    public int getClassificacao() {
+        if (this.getTotalDeReproduções() > 2000) {
+            return 10;
+        } else {
+            return 7;
+        }
+    }
 }
